@@ -1,0 +1,38 @@
+{% extends 'base.html'%}
+
+{% block content%}
+
+<div class = 'content-section'> 
+    <div class = 'media-body'> 
+      <div class = 'content-section'> 
+        <div class = 'content-section'> 
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Equipment</th>
+        <th scope="col">Rating</th>
+        <th scope="col">Location</th>
+        <th scope="col">Description</th>
+        <th scope="col">Date</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for equip in equips%}
+      <tr>
+        <th scope="row">{{equip.id}}</th>
+        <td>{{equip.equipment}}</td>
+        <td>{{equip.rating}}</td>
+        <td>{{equip.location}}</td>
+        <td>{{equip.description}}</td>
+        <td>{{equip.date}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+</div>
+    </div>
+</div>
+
+{% endblock %}

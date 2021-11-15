@@ -20,7 +20,7 @@ class Finder(models.Model):
     equipment = models.ForeignKey(Equipment, on_delete=CASCADE)
     location = models.ForeignKey(Location, on_delete=CASCADE)
     #image = models.ImageField(upload_to='static/finder/images', null=True)
-    date = models.DateTimeField()
+    date = models.DateField()
 
 
     def __str__(self):

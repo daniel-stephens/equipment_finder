@@ -12,5 +12,6 @@ class SearchForm(ModelForm):
         model = Finder
         fields = "__all__"
         widgets = {
-            'date': DateInput
+            'date': DateInput()
             }
+

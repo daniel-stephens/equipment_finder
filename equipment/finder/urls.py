@@ -1,9 +1,9 @@
 from django.urls import path
-from django.urls.resolvers import URLPattern
 
-from .views import homepage, search
+from .views import homepage, search, delete_data
 
 urlpatterns = [
     path("", homepage, name='home'),
-    path("search/", search, name='search')
+    path("search/", search, name='search'),
+    path('delete_equipment/<str:pk>/', delete_data, name='delete')
 ]

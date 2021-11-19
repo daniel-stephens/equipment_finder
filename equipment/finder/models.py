@@ -14,16 +14,17 @@ class Location(models.Model):
     def __str__(self):
         return str(self.location)
 
+
+
 class Finder(models.Model):
-    description = models.CharField(max_length=200, default='Not described')
-    rating = models.IntegerField()
+    description = models.CharField(max_length=200)
+    rating = models.IntegerField(null=True)
     equipment = models.ForeignKey(Equipment, on_delete=CASCADE)
     location = models.ForeignKey(Location, on_delete=CASCADE)
     #image = models.ImageField(upload_to='static/finder/images', null=True)
-    date = models.DateField()
-
+    date = models.DateField(null=False, default='21/08/2021')
 
     def __str__(self):
         return str(self.description), str(self.equipment), str(self.rating), str(self.location), str(self.date)
-
+ 
 
